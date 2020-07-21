@@ -1,21 +1,41 @@
+\usepackage{amsmath}
+%The principal package in the AMS-LATEX distribution. It adapts for use in LATEX most of the mathematical features found in AMS-TEX; it is highly recommended as an adjunct to serious mathematical typesetting in LATEX.
+% https://ctan.org/pkg/amsmath?lang=en
+\usepackage{amsfonts} 
+% for \mathbb command
+\usepackage{bm}
+%The bm package defines a command \bm which makes its argument bold. The argument may be any maths object from a single symbol to an expression. This is closely related to the specification of the \boldsymbol command in AMS-LATEX, but \bm is rather more careful in the way it does things.
+\usepackage{lmodern}
+%  By default, LaTeX uses the Computer Modern font-harmony. Its sans-serif font-family doesn't have a bold + {italic/slanted} shape version. So you cannot get what you want.
+% However, when you load e.g. the lmodern-package, you tell LaTeX to use the Latin Modern font-harmony.
+% source: https://tex.stackexchange.com/questions/302597/how-to-write-bold-italic-and-sans-serif-at-the-same-time
+
 %#### SCALAR, VECTOR, MATRIX, TENSOR
 %scalar:  serifs, non-bold
 %vector: serifs, non-bold
-\newcommand{\vek[1]}{\bm{#1}}
+\newcommand{\vect}[1]{\bm{#1}}
 \newcommand{\valpha}{\bm{\alpha}}
+\newcommand{\va}{\bm{a}}
 \newcommand{\vq}{\bm{q}}
 \newcommand{\vx}{\bm{x}}
 \newcommand{\vxi}{\bm{\xi}}
 \newcommand{\vy}{\bm{y}}
-%matrix: serifs, bold\\
-\newcommand{\mat[1]}{\bm{#1}}
-\newcommand{\mAlpha}{\bm{\alpha}}
+%matrix: serifs, bold, upper case\\
+\newcommand{\mat}[1]{\bm{#1}}
+\newcommand{\mA}{\bm{A}}
 \newcommand{\mQ}{\bm{Q}}
 \newcommand{\mX}{\bm{X}}
-\newcommand{\mXi}{\bm{\Xi}}
+\newcommand{\mXi}{\bm{\varXi}}
 \newcommand{\mY}{\bm{Y}}
 %tensor:  sans-serifs, bold, italic, $\textsf{\textbf{\textsl{q}}}= q_i^{jk}, \textsf{\textbf{\textsl{f}}}= q_i^{jk}$
+\newcommand{\tns}[1]{\textsf{\textbf{\textsl{#1}}}}
+\newcommand{\tnsA}{\tns{A}}
+\newcommand{\tnsQ}{\tns{Q}}
+\newcommand{\tnsX}{\tns{X}}
+\newcommand{\tnsXi}{\tns{\varXi}}
+\newcommand{\tnsY}{\tns{Y}}
 %random variable, vector, matrix: serifs, non-bold, capital letter\\
+\newcommand{\rv}[1]{#1}
 \newcommand{\rvQ}{Q}
 \newcommand{\rvX}{X}
 \newcommand{\rvXi}{\varXi}
@@ -23,3 +43,9 @@
 % operators
 \newcommand{\secondnorm}[1]{||#1||}
 \newcommand{\tr}{\textnormal{tr}}
+
+%#### SETS
+\newcommand{\sC}{\mathbb{C}}
+\newcommand{\sR}{\mathbb{R}}
+\newcommand{\sZ}{\mathbb{Z}}
+\newcommand{\sN}{\mathbb{N}}
